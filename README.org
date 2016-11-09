@@ -1,0 +1,5 @@
+* Introduction
+  This is a thin CFFI wrapper around the [[https://github.com/seanchas116/libqmlbind][libqmlbind]] binding for QT5's QML
+  engine. Functions are wrapped directly; the names are the same as
+  the C functions, but with underscores replaced with hyphens. For
+  example, =qmlbind_value_unwrap= is =QMLBIND-VALUE-UNWRAP=.
