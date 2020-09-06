@@ -1,3 +1,7 @@
+/* NOTE: this is not the file you want. This is a fallback file for older
+ * versions of qmlbind that may not have shipped the common qmlbind.h header.
+ * For versions of this header, a new interface file is generated from it; see
+ * generate.sh and the generated bindings.gen.i file. */
 %feature("intern_function", "lispify");
 
 %insert("lisphead") %{
