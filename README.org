@@ -3,3 +3,16 @@
   engine. Functions are wrapped directly; the names are the same as
   the C functions, but with underscores replaced with hyphens. For
   example, =qmlbind_value_unwrap= is =QMLBIND-VALUE-UNWRAP=.
+
+** Regenerating the Bindings
+   To re-generate the bindings, run =./scripts/generate.sh= and commit
+   the alterations to =ffi.lisp=. The environment variable
+   =QMLBIND_HEADERS= can be used to set the location of the headers;
+   this must be set to the directory containing the =qmlbind/= header
+   directory (i.e. =/usr/include/=, not =/usr/include/qmlbind/=). This
+   defaults to =/usr/include/= for convenience.
+
+   At the time of writing, SWIG has dropped support for the CFFI
+   target, so you will need a version of SWIG prior to 4.0. You may
+   also need to edit the generation script, e.g. if a 3.x SWIG is
+   packaged as =swig-3= as it is on Arch Linux.
